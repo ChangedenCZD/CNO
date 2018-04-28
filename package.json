@@ -1,0 +1,48 @@
+{
+  "name": "cno",
+  "version": "0.0.1",
+  "description": "Node.js Server Quick Develop Framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChangedenCZD/CNO.git"
+  },
+  "keywords": [
+    "framework",
+    "server",
+    "http",
+    "https",
+    "client",
+    "quick",
+    "optimize",
+    "develop",
+    "os",
+    "express",
+    "mysql",
+    "redis",
+    "request"
+  ],
+  "author": "Changeden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChangedenCZD/CNO/issues"
+  },
+  "homepage": "https://github.com/ChangedenCZD/CNO#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "glob": "^7.1.2",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "md5": "^2.2.1",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "path": "^0.12.7",
+    "redis": "^2.8.0",
+    "request": "^2.85.0",
+    "shelljs": "^0.8.1",
+    "uuid": "^3.2.1"
+  }
+}
