@@ -8,6 +8,7 @@ const logger = require('morgan');
 const ApiBuilder = require('./src/Api/ApiBuilder');
 const ApiClass = ApiBuilder.ApiClass;
 const PluginUtils = require('./src/Utils/PluginUtils');
+const PromiseUtils = require('./src/Utils/PromiseUtils');
 
 class CNO {
 
@@ -88,6 +89,17 @@ class CNO {
         this.check();
         PluginUtils(this, plugin);
         return this;
+    }
+
+    shutDown (returnPromise) {
+        const server = this.server;
+        PromiseUtils(new Promise(resolve => {
+            if (server) {
+                server.close(resolve);
+            } else {
+                resolve();
+            }
+        }), returnPromise);
     }
 }
 
@@ -176,6 +188,7 @@ function startServer (cno) {
         debug(`Build time: ${Date.now() - startTime.getTime()}ms`);
     }
 
+    cno.server = server;
     return cno;
 }
 

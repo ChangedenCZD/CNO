@@ -5,7 +5,9 @@
 [![Package Quality](http://npm.packagequality.com/shield/cno.svg)](http://packagequality.com/#?package=cno)
 
 #### 一个服务器快速开发框架。其中加入了Mysql客户端管理，Redis客户端管理，Request网络请求功能。
-#### 注意：请在Es6环境下运行。
+#### This is a quick develop framework for web server.Including Mysql Client Manager,Redis Client Manager,Network request kit,etc. 
+#### 注意：请在ES6环境下运行。
+#### Attention: Please make sure running in ES6.
 
 ## 安装 Install
 ```commandline
@@ -113,7 +115,7 @@ mysql.destroy(client);
 ```js
 co(function *() {
     const config = new cno.mysql.Config({
-    host,subHost,port,user,password,database,maxThread
+        host,subHost,port,user,password,database,maxThread
     });
     const client = yield cno.mysql.create(config);
 })
@@ -144,13 +146,17 @@ value = yield client.getData(key);
 
 // 删除数据
 // key 键
-client = client.removeData(key)
+client = client.removeData(key);
 ```
 ```js
 const client = cno.redis(host, port, password);
 ```
-
+## 关闭 ShutDown
+```js
+// returnPromise 是否以Promise形式返回，默认async/await
+const result = yield cno.shutDown(returnPromise);
+```
 ### 更多内容
-[开源官网](https://www.chansos.com)
+[开源官网/Official](https://www.chansos.com)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[意见反馈](https://github.com/ChangedenCZD/CNO/issues)
+[意见反馈/Issues](https://github.com/ChangedenCZD/CNO/issues)
