@@ -93,7 +93,7 @@ class CNO {
 
     shutDown (returnPromise) {
         const server = this.server;
-        PromiseUtils(new Promise(resolve => {
+        return PromiseUtils(new Promise(resolve => {
             if (server) {
                 server.close(resolve);
             } else {
