@@ -1,4 +1,8 @@
 # CNO
+[npm-image]: https://img.shields.io/npm/v/cno.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/cno
+[download-image]: https://img.shields.io/npm/dm/cno.svg?style=flat-square
+[download-url]: https://npmjs.org/package/cno
 #### 一个服务器快速开发框架。其中加入了Mysql客户端管理，Redis客户端管理，Request网络请求功能。
 #### 注意：请在Es6环境下运行。
 
@@ -147,3 +151,5 @@ const client = cno.redis(host, port, password);
 
 ### 更多内容
 [开源官网](https://www.chansos.com)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[意见反馈](https://github.com/ChangedenCZD/CNO/issues)
