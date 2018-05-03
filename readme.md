@@ -25,6 +25,12 @@ const cno = new CNO(configObject);
 ```
 ## 配置 Configure
 ```js
+// 添加配置
+// config.api 配置接口
+// config.api.duplicate // 是否支持重复声明接口
+// config.api.list // 接口文件列表
+// config.port 启动端口
+// config.headers // 配置http默认的headers，例如跨域
 cno = cno.setConfig(require('./example/config.js'));
 // 配置一个Express.js实例
 cno = cno.setExpress(customExpressInstance);
@@ -156,7 +162,92 @@ const client = cno.redis(host, port, password);
 // returnPromise 是否以Promise形式返回，默认async/await
 const result = yield cno.shutDown(returnPromise);
 ```
-### 更多内容
-[开源官网/Official](https://www.chansos.com)
+## 添加接口 Add Api
+#### 在config.js中添加接口文件
+```js
+module.exports = {
+    api: {
+        duplicate: false, // 不支持重复声明接口
+        list: [require('./api/api1.js')]
+    }
+}
+```
+#### 创建接口文件
+```commandline
+mkdir api && cd api && vi api1.js
+```
+#### 编辑接口文件
+```js
+const CNO = require('cno');
+const ApiBuilder = CNO.ApiBuilder;
+
+// path支持RESTful语法
+/* eg：
+* add('/api1/:key',ApiBuilder.GET,(req)=>{
+*   key = req.params.key
+* })
+* /
+
+// ApiBuilder.create('/api/') 创建一个根路径为'/api/'的建造者
+const api1 = ApiBuilder.create('/api/')
+// 添加一个path为'/api1'，方法为GET的接口
+.add('/api1', ApiBuilder.GET, (req, res, next, cno) => {
+    res.json({ route: api2.baseRoute });
+})
+// 添加一个path为'/api1/api2'，方法为POST的接口
+.add('/api1/api2', ApiBuilder.POST, (req, res, next, cno) => {
+    res.json({ route: api2.baseRoute });
+})
+// 生成cno可用的接口信息
+.build();
+
+// ApiBuilder.create('/api/') 创建一个根路径为'/api/'的建造者
+const api2 = ApiBuilder.create('/api/')
+// 添加一个path为'/api2'，方法为POST的接口
+.add('/api2', ApiBuilder.POST, (req, res, next, cno) => {
+    res.json({ route: api2.baseRoute });
+})
+// 生成cno可用的接口信息
+.build();
+
+// 只导出一个接口信息
+// module.exports = api1;
+
+// 同时导出两个接口信息
+module.exports = { api1, api2 };
+```
+##### 在执行cno.initialize方法后，config.js所注册的接口将会添加到httpServer中。
+
+## 添加默认响应头
+```js
+// 编辑config.js，添加headers字段
+module.exports = {
+    headers: [
+        { 'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE, OPTIONS' },
+        { 'Access-Control-Allow-Headers': 'X-Requested-With' },
+        { 'Access-Control-Allow-Headers': 'Content-Type' },
+        { 'Access-Control-Allow-Origin': 'https://chansos.com' },
+        { 'Access-Control-Allow-Origin': 'https://www.chansos.com' }
+    ]
+};
+```
+## 自定义启动端口
+```js
+// 编辑config.js，添加port字段
+module.exports = {
+    port: 3001 // 默认3000
+};
+```
+
+## 更多内容
+[开源官网](https://www.chansos.com)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[意见反馈/Issues](https://github.com/ChangedenCZD/CNO/issues)
+[意见反馈](https://github.com/ChangedenCZD/CNO/issues)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[邮箱(changeden520@gmail.com)]()
+<br><br>
+[Official](https://www.chansos.com)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[Issues](https://github.com/ChangedenCZD/CNO/issues)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[Email(changeden520@gmail.com)]()

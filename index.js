@@ -10,6 +10,8 @@ const ApiClass = ApiBuilder.ApiClass;
 const PluginUtils = require('./src/Utils/PluginUtils');
 const PromiseUtils = require('./src/Utils/PromiseUtils');
 
+const DEFAULT_PORT = 3000;
+
 class CNO {
 
     static get ApiBuilder () {
@@ -117,7 +119,7 @@ function parseConfig (cno) {
             });
         }
     });
-    cno.port = config['port'] || 3000;
+    cno.port = config['port'] || DEFAULT_PORT;
     cno.headers = config['headers'] || [];
     return cno;
 }
