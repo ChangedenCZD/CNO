@@ -3,12 +3,12 @@
  */
 const mysql = require('mysql');
 const PromiseUtils = require('./PromiseUtils');
-const MAX_THREAD = Math.max(require('os').cpus().length * 2 + 1, 3);
+const MAX_THREAD = require('os').cpus().length * 2 + 1;
 
 class Config {
     constructor (mysqlConfig = {}) {
-        this.connectionLimit = mysqlConfig.maxThread || MAX_THREAD;
-        this.multipleStatements = true;
+        this.connectionLimit = Math.max(mysqlConfig.maxThread || MAX_THREAD, 3);
+        this.multipleStatements = typeof mysqlConfig.multipleStatements === 'boolean' ? mysqlConfig.multipleStatements : true;
         this.hostChecked = false;
         this.mainHost = this.host = mysqlConfig.host;
         this.user = mysqlConfig.user;
