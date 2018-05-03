@@ -87,6 +87,7 @@ class CNO {
     usePlugin (plugin) {
         this.check();
         PluginUtils(this, plugin);
+        return this;
     }
 }
 
