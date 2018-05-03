@@ -86,7 +86,7 @@ requestInstance.request (returnPromise);
 ```
 ```js
 co(function* () {
-    const result = yield cno.request.create('https://img.shields.io/npm/v/egg.svg?style=flat-square', cno.request.GET).setParams({ a: 'a' }).request();
+    const result = yield cno.request.create('https://img.shields.io/npm/v/cno.svg?style=flat-square', cno.request.GET).setParams({ a: 'a' }).request();
 });
 ```
 ### Plugin.Mysql
