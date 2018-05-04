@@ -264,5 +264,6 @@ module.exports = {
 [issues-url]: https://github.com/ChangedenCZD/CNO/issues
 
 ## 打赏 Donate
-![支付宝](https://github.com/ChangedenCZD/CNO/tree/master/assets/img/alipay.png "支付宝")
-![微信](https://github.com/ChangedenCZD/CNO/tree/master/assets/img/wechat_pay.png "微信")
+<img width="192" alt="支付宝" src="https://github.com/ChangedenCZD/CNO/blob/master/assets/img/alipay.png?raw=true"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img width="192" alt="微信" src="https://github.com/ChangedenCZD/CNO/blob/master/assets/img/wechat_pay.png?raw=true"/>
