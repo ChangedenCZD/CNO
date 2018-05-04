@@ -9,6 +9,8 @@
 #### 注意：请在ES6环境下运行。
 #### Attention: Please make sure running in ES6.
 
+[实例源码](https://github.com/ChangedenCZD/CNO/tree/master/example)
+
 ## 安装 Install
 ```commandline
 npm install -save cno
@@ -240,14 +242,23 @@ module.exports = {
 ```
 
 ## 更多内容
-[开源官网](https://www.chansos.com)
+[开源官网][official-url]
 &nbsp;&nbsp;&nbsp;&nbsp;
-[意见反馈](https://github.com/ChangedenCZD/CNO/issues)
+[实例源码][sample-url]
+&nbsp;&nbsp;&nbsp;&nbsp;
+[意见反馈][issues-url]
 &nbsp;&nbsp;&nbsp;&nbsp;
 [邮箱(changeden520@gmail.com)]()
 <br><br>
-[Official](https://www.chansos.com)
+[Official][official-url]
 &nbsp;&nbsp;&nbsp;&nbsp;
-[Issues](https://github.com/ChangedenCZD/CNO/issues)
+[Sample][sample-url]
+&nbsp;&nbsp;&nbsp;&nbsp;
+[Issues][issues-url]
 &nbsp;&nbsp;&nbsp;&nbsp;
 [Email(changeden520@gmail.com)]()
+
+
+[official-url]: https://www.chansos.com
+[sample-url]: https://github.com/ChangedenCZD/CNO/tree/master/example
+[issues-url]: https://github.com/ChangedenCZD/CNO/issues
