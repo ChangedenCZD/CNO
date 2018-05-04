@@ -1,6 +1,6 @@
 {
   "name": "cno",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Node.js Server Quick Develop Framework.",
   "main": "index.js",
   "scripts": {
