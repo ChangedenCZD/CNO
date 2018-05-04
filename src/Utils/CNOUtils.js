@@ -1,4 +1,4 @@
-const Package = require('./package.json');
+const Package = require('../../package.json');
 const CNO_VERSION = Package.version;
 const debug = require('debug')(`cno:${CNO_VERSION}`);
 debug.enabled = true;
@@ -142,7 +142,7 @@ function check (cno) {
  * 设置cno配置信息
  * */
 function setConfig (cno, config) {
-    check();
+    check(cno);
     if (typeof config === 'object') {
         cno.config = config;
     } else {
@@ -155,7 +155,7 @@ function setConfig (cno, config) {
  * 手动添加接口信息
  * */
 function addApi (cno, api) {
-    check();
+    check(cno);
     if (api) {
         if (!cno.duplicateRoute) {
             const baseRoute = api.baseRoute;
@@ -176,7 +176,7 @@ function addApi (cno, api) {
  * 使用插件
  * */
 function usePlugin (cno, plugin) {
-    check();
+    check(cno);
     PluginUtils(cno, plugin);
     return cno;
 }
@@ -188,8 +188,7 @@ function initialize (cno) {
     if (!cno.config) {
         throw new Error('Please set a config at first.');
     }
-    parseConfig(cno).createExpress(cno).assembleApi(cno).startServer(cno);
-    cno.initialized = true;
+    startServer(assembleApi(createExpress(parseConfig(cno)))).initialized = true;
     return locked(cno);
 }
 
@@ -211,7 +210,7 @@ function shutDown (cno, returnPromise) {
  * 自定义express实例
  * */
 function setExpress (cno, expressInstance) {
-    check();
+    check(cno);
     cno.express = expressInstance || cno.express;
     return cno;
 }

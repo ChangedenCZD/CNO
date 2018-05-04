@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cno": "0.0.6"
+    "cno": "0.0.8"
   }
 }
