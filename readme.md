@@ -262,3 +262,7 @@ module.exports = {
 [official-url]: https://www.chansos.com
 [sample-url]: https://github.com/ChangedenCZD/CNO/tree/master/example
 [issues-url]: https://github.com/ChangedenCZD/CNO/issues
+
+## 打赏 Donate
+![支付宝](https://github.com/ChangedenCZD/CNO/tree/master/assets/img/alipay.png "支付宝")
+![微信](https://github.com/ChangedenCZD/CNO/tree/master/assets/img/wechat_pay.png "微信")
