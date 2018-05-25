@@ -9,7 +9,7 @@
 #### 注意：请在ES6环境下运行。
 #### Attention: Please make sure running in ES6.
 
-[实例源码 / Sample][sample-url]
+[更新日志](./change_logs.md) &nbsp;&nbsp;&nbsp; [实例源码 / Sample][sample-url]
 
 ## 安装 Install
 ```commandline

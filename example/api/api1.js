@@ -1,4 +1,5 @@
 const CNO = require('cno');
+// const CNO = require('../../index');
 // 导入ApiBuilder
 const ApiBuilder = CNO.ApiBuilder;
 // 创建一个根路径为'/api/'的Api建造者
@@ -9,7 +10,7 @@ const api1 = ApiBuilder.create('/api/')
  * curl -X GET
  *   http://localhost:3001/api/api1
  * */
-.add('/api1', ApiBuilder.GET, (req, res, next, cno) => {
+.add('/api1', ApiBuilder.GET, (req, res, next) => {
     res.json({ query: req.query });
 })
 // 添加一个path为'/api1/api2'的接口

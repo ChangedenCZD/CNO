@@ -5,7 +5,7 @@ module.exports = {
         // 是否开启重复接口声明（忽略重复接口）
         duplicate: false,
         // 接口文件列表
-        list: [require('./api/api1.js'), require('./api/api2.js')]
+        list: [require('./api/api1.js'), require('./api/api2.js'), require('./api/api3.js')]
     },
     // 启动端口
     port: 3001,

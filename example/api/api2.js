@@ -1,4 +1,5 @@
 const CNO = require('cno');
+// const CNO = require('../../index');
 // 导入ApiBuilder
 const ApiBuilder = CNO.ApiBuilder;
 const co = require('co');

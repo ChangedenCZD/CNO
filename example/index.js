@@ -1,5 +1,6 @@
 // 导入cno模块
 const CNO = require('cno');
+// const CNO = require('../index');
 // 创建cno实例
 const cno = new CNO();
 // 添加cno配置文件
