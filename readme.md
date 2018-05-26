@@ -1,10 +1,10 @@
 # CNO
 
-[![NPM version](https://img.shields.io/npm/v/cno.svg)](https://npmjs.org/package/cno)
-[![NPM download](https://img.shields.io/npm/dm/cno.svg)](https://npmjs.org/package/cno)
-[![NPM download](https://img.shields.io/npm/dw/cno.svg)](https://npmjs.org/package/cno)
+![NPM version](https://img.shields.io/npm/v/cno.svg)
+![NPM download](https://img.shields.io/npm/dm/cno.svg)
+![NPM download](https://img.shields.io/npm/dw/cno.svg)
 ![npm](https://img.shields.io/npm/l/cno.svg)
-[![Package Quality](http://npm.packagequality.com/shield/cno.svg)](http://packagequality.com/#?package=cno)
+![Package Quality](http://npm.packagequality.com/shield/cno.svg)
 
 
 ![GitHub watchers](https://img.shields.io/github/watchers/ChangedenCZD/CNO.svg?label=Watch)
