@@ -2,7 +2,17 @@
 
 [![NPM version](https://img.shields.io/npm/v/cno.svg)](https://npmjs.org/package/cno)
 [![NPM download](https://img.shields.io/npm/dm/cno.svg)](https://npmjs.org/package/cno)
+[![NPM download](https://img.shields.io/npm/dw/cno.svg)](https://npmjs.org/package/cno)
+![npm](https://img.shields.io/npm/l/cno.svg)
 [![Package Quality](http://npm.packagequality.com/shield/cno.svg)](http://packagequality.com/#?package=cno)
+
+
+![GitHub watchers](https://img.shields.io/github/watchers/ChangedenCZD/CNO.svg?label=Watch)
+![GitHub stars](https://img.shields.io/github/stars/ChangedenCZD/CNO.svg?label=Stars)
+![GitHub forks](https://img.shields.io/github/forks/ChangedenCZD/CNO.svg?label=Fork)
+![GitHub issues](https://img.shields.io/github/issues/ChangedenCZD/CNO.svg?)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ChangedenCZD/CNO.svg)
+
 
 #### 一个服务器快速开发框架。其中加入了Mysql客户端管理，Mongodb客户端管理，Redis客户端管理，Request网络请求功能。
 #### This is a quick develop framework for web server.Including Mysql Client Manager,Mongodb Client Manager,Redis Client Manager,Network request kit,etc. 
