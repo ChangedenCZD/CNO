@@ -111,6 +111,14 @@ function exec (client, sql = '', args = [], returnPromise = false) {
     }), returnPromise);
 }
 
+/**
+ * 教程
+ * @return {string}
+ * */
+function HELP () {
+    return 'https://github.com/mysqljs/mysql/blob/master/Readme.md';
+}
+
 module.exports = {
-    Config, create, exec, destroy
+    Config, create, exec, destroy, HELP
 };

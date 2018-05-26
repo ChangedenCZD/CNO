@@ -73,6 +73,13 @@ class Request extends Method {
             });
         }), returnPromise);
     }
+
+    /**
+     * 教程
+     * */
+    static get HELP () {
+        return 'https://github.com/request/request/blob/master/README.md';
+    }
 }
 
 module.exports = Request;

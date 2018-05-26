@@ -92,6 +92,13 @@ class Redis {
         }
         return this;
     }
+
+    /**
+     * 教程
+     * */
+    static get HELP () {
+        return 'https://github.com/NodeRedis/node_redis/blob/master/README.md';
+    }
 }
 
 module.exports = Redis.create;

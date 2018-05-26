@@ -4,8 +4,8 @@
 [![NPM download](https://img.shields.io/npm/dm/cno.svg)](https://npmjs.org/package/cno)
 [![Package Quality](http://npm.packagequality.com/shield/cno.svg)](http://packagequality.com/#?package=cno)
 
-#### 一个服务器快速开发框架。其中加入了Mysql客户端管理，Redis客户端管理，Request网络请求功能。
-#### This is a quick develop framework for web server.Including Mysql Client Manager,Redis Client Manager,Network request kit,etc. 
+#### 一个服务器快速开发框架。其中加入了Mysql客户端管理，Mongodb客户端管理，Redis客户端管理，Request网络请求功能。
+#### This is a quick develop framework for web server.Including Mysql Client Manager,Mongodb Client Manager,Redis Client Manager,Network request kit,etc. 
 #### 注意：请在ES6环境下运行。
 #### Attention: Please make sure running in ES6.
 
@@ -45,6 +45,8 @@ cno = cno.usePlugin(CNO.Plugin.Request);
 cno = cno.usePlugin(CNO.Plugin.Mysql);
 // Redis客户端管理
 cno = cno.usePlugin(CNO.Plugin.Redis);
+// Mongodb客户端管理
+cno = cno.usePlugin(CNO.Plugin.Mongodb);
 ```
 ## 初始化 Initialize
 ```js
@@ -85,6 +87,9 @@ requestInstance = requestInstance.setOauth(oauth);
 // 执行请求
 // returnPromise 是否返回Promise对象，默认返回async/await
 requestInstance.request (returnPromise);
+
+// 获取相关教程
+console.log(request.HELP());
 ```
 ```js
 co(function* () {
@@ -119,6 +124,9 @@ result = yield mysql.exec(client, sql, args);
     
 // 销毁client
 mysql.destroy(client);
+
+// 获取相关教程
+console.log(mysql.HELP());
 ```
 ```js
 co(function *() {
@@ -127,6 +135,44 @@ co(function *() {
     });
     const client = yield cno.mysql.create(config);
 })
+```
+### Plugin.Mongodb
+#### 该插件是以[mongodb](https://www.npmjs.com/package/mongodb)为基础进行封装的。
+```js
+cno = cno.usePlugin(CNO.Plugin.Mongodb);
+cno = cno.initialize();
+mongodb = cno.mongodb;
+co(function * () {
+    // 单服务器
+    origins = 'localhost:27017';
+    // 服务器集群
+    origins = ['localhost:27017', 'localhost:27018'];
+    // options 请看官方教程
+    manager = mongodb(origins, options);
+    
+    client = yield manager.getClient();
+    
+    // 获取数据库操作实例
+    // dbName 数据库名字
+    db = client.db(dbName);
+    // 获取数据库实例
+    // 实例相关操作请看官方教程
+    dbInstance = db.instance;
+    
+    // 获取集合操作实例
+    // name 集合名字
+    collection = db.collection(name, options);
+    // 获取集合实例
+    // 实例相关操作请看官方教程
+    collectionInstance = collection.instance;
+    
+    // 关闭客户端
+    manager.close();
+    
+    // 获取相关教程
+    console.log(mongodb.HELP());
+});
+
 ```
 ### Plugin.Redis
 #### 该插件是以[redis](https://www.npmjs.com/package/redis)为基础进行封装的。
@@ -155,6 +201,9 @@ value = yield client.getData(key);
 // 删除数据
 // key 键
 client = client.removeData(key);
+
+// 获取相关教程
+console.log(redis.HELP());
 ```
 ```js
 const client = cno.redis(host, port, password);

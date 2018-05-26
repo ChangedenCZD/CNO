@@ -1,6 +1,6 @@
 {
   "name": "cno",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Node.js Server Quick Develop Framework.",
   "main": "index.js",
   "scripts": {
@@ -37,6 +37,7 @@
     "http": "0.0.0",
     "https": "^1.0.0",
     "md5": "^2.2.1",
+    "mongodb": "^3.1.0-beta4",
     "morgan": "^1.9.0",
     "mysql": "^2.15.0",
     "path": "^0.12.7",

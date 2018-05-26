@@ -22,4 +22,8 @@ module.exports = class {
     static get Redis () {
         return new Plugin('Redis', 'redis', '../Utils/RedisUtils');
     }
+
+    static get Mongodb () {
+        return new Plugin('Mongodb', 'mongodb', '../Utils/MongodbUtils');
+    }
 };
