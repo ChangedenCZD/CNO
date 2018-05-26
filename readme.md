@@ -7,10 +7,10 @@
 ![Package Quality](http://npm.packagequality.com/shield/cno.svg)
 
 
-![GitHub watchers](https://img.shields.io/github/watchers/ChangedenCZD/CNO.svg?label=Watch)
-![GitHub stars](https://img.shields.io/github/stars/ChangedenCZD/CNO.svg?label=Stars)
-![GitHub forks](https://img.shields.io/github/forks/ChangedenCZD/CNO.svg?label=Fork)
-![GitHub issues](https://img.shields.io/github/issues/ChangedenCZD/CNO.svg?)
+![GitHub watchers](https://img.shields.io/github/watchers/ChangedenCZD/CNO.svg)
+![GitHub stars](https://img.shields.io/github/stars/ChangedenCZD/CNO.svg)
+![GitHub forks](https://img.shields.io/github/forks/ChangedenCZD/CNO.svg)
+![GitHub issues](https://img.shields.io/github/issues/ChangedenCZD/CNO.svg)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ChangedenCZD/CNO.svg)
 
 
