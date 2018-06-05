@@ -1,3 +1,4 @@
+const path = require('path');
 // cno配置文件
 module.exports = {
     // 接口信息
@@ -16,5 +17,6 @@ module.exports = {
         { 'Access-Control-Allow-Headers': 'Content-Type' },
         { 'Access-Control-Allow-Origin': 'https://chansos.com' },
         { 'Access-Control-Allow-Origin': 'https://www.chansos.com' }
-    ]
+    ],
+    publicDir: path.join(__dirname, 'static')
 };

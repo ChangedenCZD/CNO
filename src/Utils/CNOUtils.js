@@ -6,6 +6,7 @@ const Express = require('express');
 const BodyParser = require('body-parser');
 const http = require('http');
 const logger = require('morgan');
+const lessMiddleware = require('less-middleware');
 const PromiseUtils = require('./PromiseUtils');
 const PluginUtils = require('./PluginUtils');
 const ApiBuilder = require('../Api/ApiBuilder');
@@ -32,6 +33,7 @@ function parseConfig (cno) {
     });
     cno.port = config['port'] || DEFAULT_PORT;
     cno.headers = config['headers'] || [];
+    cno.publicDir = config['publicDir'] || '';
     return cno;
 }
 
@@ -53,6 +55,11 @@ function createExpress (cno) {
     });
     express.set('port', cno.port);
     express.use(logger('dev'));
+    const publicDir = cno.publicDir;
+    if (!!publicDir) {
+        express.use(lessMiddleware(publicDir));
+        express.use(Express.static(publicDir));
+    }
     cno.express = express;
     return cno;
 }

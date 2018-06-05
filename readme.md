@@ -43,6 +43,7 @@ const cno = new CNO(configObject);
 // config.api.list // 接口文件列表
 // config.port 启动端口
 // config.headers // 配置http默认的headers，例如跨域
+// config.publicDir // 配置静态网页文件夹（绝对路径）
 cno = cno.setConfig(require('./example/config.js'));
 // 配置一个Express.js实例
 cno = cno.setExpress(customExpressInstance);
